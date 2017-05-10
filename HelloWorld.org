@@ -5,6 +5,6 @@
 * HelloWorld.h
 ** public functions
 *** int Print_out(char *)
+    -This function writes out the selected message to the screen
 ** public variables
 *** char * Print_string
-    

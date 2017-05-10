@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <strings.h>
+#include <string.h>
 
 int main(){
   
@@ -14,9 +14,8 @@ int main(){
   char string2[30];
   char string3[30];
   int file_open = 0;
-  int func_or_var = -1;
+  int func_or_var = -1;    //consider different implementation
 
-  //fp_out = fopen(out_filename,"w");
   fp_in = fopen(in_filename, "r");
 
   while(fgets(line,BUFFER,fp_in)!=NULL){    //read while not EOF
@@ -44,7 +43,7 @@ int main(){
 	break;
 
       case 2:
-	fprintf(fp_out,"\n%s %s:\n",string2,string3);
+	fprintf(fp_out,"\n%/%/%s %s:\n",string2,string3);
 	if(!strcmp(string3,"functions")) func_or_var = 1;
         else if(!strcmp(string3,"variables")) func_or_var = 0;
 	break;
@@ -54,11 +53,16 @@ int main(){
         for(int count=0;count<(strlen(line)-1);count++){
 	  if(count>3) fprintf(fp_out,"%c",line[count]);
 	}
-	if(func_or_var==1) fprintf(fp_out,"{\n\n}\n\n");
+	if(func_or_var==1) fprintf(fp_out,"{\n\n  %/%/return 0;\n}\n\n");
 	else if(func_or_var==0) fprintf(fp_out,";\n");
 	break;
 
       default:
+	fprintf(fp_out,"   %/%/");
+        for(int count=0;count<(strlen(line)-1);count++){
+	  if(count>3) fprintf(fp_out,"%c",line[count]);
+	}
+	fprintf(fp_out,"\n\n\n");
 	break;
       }
   }

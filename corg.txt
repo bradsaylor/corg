@@ -1,0 +1,8 @@
+
+case2 private functions
+
+case2 private variables
+
+case2 public functions
+
+case2 public variables

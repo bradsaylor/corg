@@ -66,14 +66,14 @@ int main(){
 	  if(count>3) fprintf(fp_out,"%c",line[count]);
 	}
 
-	if(two_star_type==1) fprintf(fp_out,"{\n\n    //return 0;\n  }\n\n");
+	if(two_star_type==1) fprintf(fp_out,"{\n\n  //return 0;\n  }\n\n");
 	else if(two_star_type==0) fprintf(fp_out,";\n");
 	else if(two_star_type==2) fprintf(fp_out,"\n");
 
 	break;
 
       default:
-	fprintf(fp_out,"   //--");
+	fprintf(fp_out,"   //****");
         for(int count=0;count<(strlen(line)-1);count++){
 	  if(count>3) fprintf(fp_out,"%c",line[count]);
 	}

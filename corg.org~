@@ -1,0 +1,18 @@
+
+* corg.c
+** includes
+*** <stdio.h>
+*** "corg.h"
+** internal functions
+*** int main()
+*** char * parse_line(char *)
+    -Takes a line of input from fp_in and returns 
+    -a line of output for printing to fp_out
+** internal variables
+*** FILE *fp_in
+*** FILE *fp_out
+* corg.h
+** includes
+** external functions
+** external variables
+

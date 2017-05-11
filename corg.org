@@ -1,0 +1,16 @@
+* corgi.c
+** includes
+*** <stdio.h>
+*** "corg.h"
+** internal variables
+*** FILE *fp_in
+*** FILE *fp_out
+** internal functions
+*** int main()
+*** char * parse_line(char *)
+    -Takes a line of input from fp_in and returns 
+    -a line of output for printing to fp_out
+* corgi.h
+** includes
+** external variables
+** external functions
